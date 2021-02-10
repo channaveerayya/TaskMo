@@ -1,0 +1,4 @@
+{
+  "mongoURI": "mongodb+srv://ChannuBS:Cbs@1993@cluster0.a7jbx.mongodb.net/taskMo?retryWrites=true&w=majority",
+  "jwtSecret": "HashCode@123"
+}
