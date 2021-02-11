@@ -1,25 +1,8 @@
-import React, { Fragment, useEffect } from "react"
-import PropTypes from "prop-types"
-import { connect } from "react-redux"
-import { getJobs, applyJob } from "../actions/job"
-import { setAlert } from "../actions/alerts"
-import TableGrid from "./TableGrid"
-import { Container, Paper, Typography, Grid } from "@material-ui/core"
+import React from "react"
+import { Container, Typography, Grid } from "@material-ui/core"
 import Card from "./card"
-import { makeStyles } from "@material-ui/core/styles"
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
-  paper: {
-    padding: theme.spacing(2),
-    textAlign: "center",
-    color: theme.palette.text.secondary,
-  },
-}))
 
 const AppliedJob = ({ job, index }) => {
-  const classes = useStyles()
   return (
     <Container maxWidth="lg" style={{ padding: 10 }}>
       <Typography variant="h4">

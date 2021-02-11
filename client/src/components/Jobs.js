@@ -5,6 +5,7 @@ import { getJobs, applyJob } from "../actions/job"
 import { setAlert } from "../actions/alerts"
 import TableGrid from "./TableGrid"
 import { Container, Typography } from "@material-ui/core"
+import Loading from "./Loading"
 const Jobs = ({
   getJobs,
   jobs: { jobs, loading },
@@ -41,7 +42,9 @@ const Jobs = ({
     "Longitude",
   ]
   return loading ? (
-    <h1>loading</h1>
+    <div style={{ position: "absolute", top: " 50%", left: "50%" }}>
+      <Loading />
+    </div>
   ) : (
     <Container maxWidth="lg">
       <Typography variant="h2">Opening Jobs</Typography>

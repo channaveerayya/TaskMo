@@ -1,7 +1,7 @@
 import React, { useState } from "react"
-import { Button, Grid, Typography, Switch } from "@material-ui/core"
+import { Button, Grid, Typography } from "@material-ui/core"
 import InputField from "./InputField"
-import { makeStyles, withStyles } from "@material-ui/styles"
+import { makeStyles } from "@material-ui/styles"
 
 const useStyles = makeStyles((theme) => ({
   loginContainer: {

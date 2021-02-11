@@ -37,7 +37,6 @@ function App() {
               path="/register"
               component={() => <LoginPage register={true} />}
             />
-            <Route exact path="/jobs" component={() => <h1>jobs list</h1>} />
             <PrivateRouting exact path="/profile" component={ProfilePage} />
             <PrivateRouting exact path="/addJob" component={AddJobPage} />
             <PrivateRouting exact path="/editProfile" component={EditProfile} />
