@@ -91,10 +91,20 @@ export default function CustomizedTables({
                     onClick={(e) => {
                       onClick(row._id)
                     }}
+                    disabled={!(Date.now() < new Date(row.expireDate))}
                     variant="outlined"
+                    style={{
+                      backgroundColor: !(Date.now() < new Date(row.expireDate))
+                        ? "#E53A40"
+                        : "inherit",
+                    }}
                     className={classes.btn}
                   >
-                    <span style={{ marginRight: 10 }}>Apply </span>
+                    <span style={{ marginRight: 10 }}>
+                      {Date.now() < new Date(row.expireDate)
+                        ? "Apply"
+                        : "Expired"}
+                    </span>
                   </Button>
                 )}
               </StyledTableCell>
