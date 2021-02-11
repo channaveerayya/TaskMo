@@ -8,9 +8,9 @@ const User = require("../models/LoginUser")
 const { check, validationResult } = require("express-validator")
 const LoginUser = require("../models/LoginUser")
 
-router.get("/", auth, async (req, res) => {
+router.get("/me", auth, async (req, res) => {
   try {
-    const profile = await Profile.find({ user: req.user.id })
+    const profile = await Profile.findOne({ user: req.user.id })
     if (!profile) {
       return res.status(400).json({ msg: "There is no profile for this user" })
     }

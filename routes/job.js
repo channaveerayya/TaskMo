@@ -100,7 +100,7 @@ router.put("/apply/:id", auth, async (req, res) => {
       job.applied.filter((apply) => apply.user.toString() === req.user.id)
         .length
     ) {
-      return res.status(400).json({ msg: "Job already Liked" })
+      return res.status(400).json({ msg: "Job already applied" })
     }
 
     if (user.isEmployer) {
