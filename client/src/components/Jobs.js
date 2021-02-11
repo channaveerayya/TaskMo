@@ -28,6 +28,8 @@ const Jobs = ({
           "error"
         )
       }
+    } else {
+      setAlert("Login to apply", "error")
     }
   }
 
